@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="5450">
+        <Folder id="5">
+            <Style id="0">
+                <IconStyle id="3">
+                    <colorMode>normal</colorMode>
+                    <scale>0</scale>
+                    <heading>0</heading>
+                    <Icon id="4">
+                        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+                    </Icon>
+                </IconStyle>
+                <LineStyle id="1">
+                    <color>ff232323</color>
+                    <colorMode>normal</colorMode>
+                    <width>0.52</width>
+                </LineStyle>
+                <PolyStyle id="2">
+                    <color>ffb2a6f3</color>
+                    <colorMode>normal</colorMode>
+                    <fill>1</fill>
+                    <outline>1</outline>
+                </PolyStyle>
+            </Style>
+            <name>Merged</name>
+            <Placemark id="7">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Bacau</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Bacau</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Bacau.shp|layername=Bacau</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="6">
+                    <Point id="8">
+                        <coordinates>26.921239021384707,46.55514763892953,0.0</coordinates>
+                    </Point>
+                    <Polygon id="10">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="14">
+                                <coordinates>26.81041622936182,46.66311417342605,0.0 27.032061813407598,46.66311417342605,0.0 27.032061813407598,46.447181104433,0.0 26.81041622936182,46.447181104433,0.0 26.81041622936182,46.66311417342605,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="33">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Barlad</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Barlad</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Barlad.shp|layername=Barlad</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="32">
+                    <Point id="34">
+                        <coordinates>27.66957849329187,46.228820216542516,0.0</coordinates>
+                    </Point>
+                    <Polygon id="36">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="40">
+                                <coordinates>27.6328755840781,46.27366345970642,0.0 27.706281402505635,46.27366345970642,0.0 27.706281402505635,46.18397697337862,0.0 27.6328755840781,46.18397697337862,0.0 27.6328755840781,46.27366345970642,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="59">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Botosani</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Botosani</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Botosani.shp|layername=Botosani</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="58">
+                    <Point id="60">
+                        <coordinates>26.652750813906568,47.7513482909704,0.0</coordinates>
+                    </Point>
+                    <Polygon id="62">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="66">
+                                <coordinates>26.531931120541408,47.81161532477667,0.0 26.77357050727173,47.81161532477667,0.0 26.77357050727173,47.69108125716414,0.0 26.531931120541408,47.69108125716414,0.0 26.531931120541408,47.81161532477667,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="85">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Dorohoi</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Dorohoi</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Dorohoi.shp|layername=Dorohoi</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="84">
+                    <Point id="86">
+                        <coordinates>26.415110187713157,47.95357132383692,0.0</coordinates>
+                    </Point>
+                    <Polygon id="88">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="92">
+                                <coordinates>26.346845632833077,47.99612956097973,0.0 26.483374742593234,47.99612956097973,0.0 26.483374742593234,47.91101308669411,0.0 26.346845632833077,47.91101308669411,0.0 26.346845632833077,47.99612956097973,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="111">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Falticeni</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Falticeni</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Falticeni.shp|layername=Falticeni</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="110">
+                    <Point id="112">
+                        <coordinates>26.294576120100636,47.468007544355196,0.0</coordinates>
+                    </Point>
+                    <Polygon id="114">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="118">
+                                <coordinates>26.23659409231546,47.50085450590838,0.0 26.352558147885805,47.50085450590838,0.0 26.352558147885805,47.43516058280202,0.0 26.23659409231546,47.43516058280202,0.0 26.23659409231546,47.50085450590838,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="137">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Husi</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Husi</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Husi.shp|layername=Husi</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="136">
+                    <Point id="138">
+                        <coordinates>28.06002889714571,46.67825233831579,0.0</coordinates>
+                    </Point>
+                    <Polygon id="140">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="144">
+                                <coordinates>28.017613472879216,46.69967426976351,0.0 28.102444321412204,46.69967426976351,0.0 28.102444321412204,46.65683040686806,0.0 28.017613472879216,46.65683040686806,0.0 28.017613472879216,46.69967426976351,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="163">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Iasi</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Iasi</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Iasi.shp|layername=Iasi</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="162">
+                    <Point id="164">
+                        <coordinates>27.640444666522946,47.15981735726061,0.0</coordinates>
+                    </Point>
+                    <Polygon id="166">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="170">
+                                <coordinates>27.44621915473025,47.256073235899045,0.0 27.83467017831564,47.256073235899045,0.0 27.83467017831564,47.06356147862217,0.0 27.44621915473025,47.06356147862217,0.0 27.44621915473025,47.256073235899045,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="189">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Moin_Coman</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Moin_Coman</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Moin_Coman.shp|layername=Moin_Coman</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="188">
+                    <Point id="190">
+                        <coordinates>26.439531189563564,46.44418203403033,0.0</coordinates>
+                    </Point>
+                    <Polygon id="192">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="196">
+                                <coordinates>26.356556908422714,46.50173562318655,0.0 26.522505470704413,46.50173562318655,0.0 26.522505470704413,46.38662844487411,0.0 26.356556908422714,46.38662844487411,0.0 26.356556908422714,46.50173562318655,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="215">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Onesti</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Onesti</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Onesti.shp|layername=Onesti</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="214">
+                    <Point id="216">
+                        <coordinates>26.803846837051186,46.25524059866143,0.0</coordinates>
+                    </Point>
+                    <Polygon id="218">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="222">
+                                <coordinates>26.73415415340793,46.29608508128842,0.0 26.87353952069445,46.29608508128842,0.0 26.87353952069445,46.214396116034436,0.0 26.73415415340793,46.214396116034436,0.0 26.73415415340793,46.29608508128842,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="241">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Pascani</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Pascani</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Pascani.shp|layername=Pascani</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="240">
+                    <Point id="242">
+                        <coordinates>26.72715632246832,47.24978946934105,0.0</coordinates>
+                    </Point>
+                    <Polygon id="244">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="248">
+                                <coordinates>26.6781715058912,47.27720954159415,0.0 26.776141139045457,47.27720954159415,0.0 26.776141139045457,47.222369397087974,0.0 26.6781715058912,47.222369397087974,0.0 26.6781715058912,47.27720954159415,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="267">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Piatra Neamt</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Piatra_Neamt</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Piatra_Neamt.shp|layername=Piatra_Neamt</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="266">
+                    <Point id="268">
+                        <coordinates>26.377407588365166,46.93331613542002,0.0</coordinates>
+                    </Point>
+                    <Polygon id="270">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="274">
+                                <coordinates>26.300003009400722,46.989298782936736,0.0 26.454812167329607,46.989298782936736,0.0 26.454812167329607,46.8773334879033,0.0 26.300003009400722,46.8773334879033,0.0 26.300003009400722,46.989298782936736,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="293">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Radauti</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Radauti</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Radauti.shp|layername=Radauti</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="292">
+                    <Point id="294">
+                        <coordinates>25.91397980471274,47.841320403050844,0.0</coordinates>
+                    </Point>
+                    <Polygon id="296">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="300">
+                                <coordinates>25.872135631951522,47.86645546928285,0.0 25.955823977473962,47.86645546928285,0.0 25.955823977473962,47.816185336818855,0.0 25.872135631951522,47.816185336818855,0.0 25.872135631951522,47.86645546928285,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="319">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Roman</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Roman</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Roman.shp|layername=Roman</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="318">
+                    <Point id="320">
+                        <coordinates>26.92852247807693,46.93460145130688,0.0</coordinates>
+                    </Point>
+                    <Polygon id="322">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="326">
+                                <coordinates>26.84383444242026,46.98073001035766,0.0 27.013210513733593,46.98073001035766,0.0 27.013210513733593,46.888472892256125,0.0 26.84383444242026,46.888472892256125,0.0 26.84383444242026,46.98073001035766,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="345">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Suceava</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Suceava</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Suceava.shp|layername=Suceava</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="344">
+                    <Point id="346">
+                        <coordinates>26.252303508710458,47.669659325716424,0.0</coordinates>
+                    </Point>
+                    <Polygon id="348">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="352">
+                                <coordinates>26.118345030724026,47.740208886617594,0.0 26.38626198669689,47.740208886617594,0.0 26.38626198669689,47.59910976481525,0.0 26.118345030724026,47.59910976481525,0.0 26.118345030724026,47.740208886617594,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+            <Placemark id="371">
+                <name/>
+                <description>
+<![CDATA[
+<table>
+<tr style="background-color:#DDDDFF"><td>Drawings</td><td>$[Drawings]</td></tr>
+<tr><td>OID_</td><td>$[OID_]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Name</td><td>$[Name]</td></tr>
+<tr><td>FolderPath</td><td>$[FolderPath]</td></tr>
+<tr style="background-color:#DDDDFF"><td>SymbolID</td><td>$[SymbolID]</td></tr>
+<tr><td>AltMode</td><td>$[AltMode]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Base</td><td>$[Base]</td></tr>
+<tr><td>Clamped</td><td>$[Clamped]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Extruded</td><td>$[Extruded]</td></tr>
+<tr><td>Snippet</td><td>$[Snippet]</td></tr>
+<tr style="background-color:#DDDDFF"><td>PopupInfo</td><td>$[PopupInfo]</td></tr>
+<tr><td>Shape_Leng</td><td>$[Shape_Leng]</td></tr>
+<tr style="background-color:#DDDDFF"><td>Shape_Area</td><td>$[Shape_Area]</td></tr>
+<tr><td>layer</td><td>$[layer]</td></tr>
+<tr style="background-color:#DDDDFF"><td>path</td><td>$[path]</td></tr>
+</table>
+]]>                </description>
+                <styleUrl>#0</styleUrl>
+                <ExtendedData>
+                    <Data name="Drawings">
+                        <value>Vaslui</value>
+                        <displayName>Drawings</displayName>
+                    </Data>
+                    <Data name="OID_">
+                        <value/>
+                        <displayName>OID_</displayName>
+                    </Data>
+                    <Data name="Name">
+                        <value/>
+                        <displayName>Name</displayName>
+                    </Data>
+                    <Data name="FolderPath">
+                        <value/>
+                        <displayName>FolderPath</displayName>
+                    </Data>
+                    <Data name="SymbolID">
+                        <value/>
+                        <displayName>SymbolID</displayName>
+                    </Data>
+                    <Data name="AltMode">
+                        <value/>
+                        <displayName>AltMode</displayName>
+                    </Data>
+                    <Data name="Base">
+                        <value/>
+                        <displayName>Base</displayName>
+                    </Data>
+                    <Data name="Clamped">
+                        <value/>
+                        <displayName>Clamped</displayName>
+                    </Data>
+                    <Data name="Extruded">
+                        <value/>
+                        <displayName>Extruded</displayName>
+                    </Data>
+                    <Data name="Snippet">
+                        <value/>
+                        <displayName>Snippet</displayName>
+                    </Data>
+                    <Data name="PopupInfo">
+                        <value/>
+                        <displayName>PopupInfo</displayName>
+                    </Data>
+                    <Data name="Shape_Leng">
+                        <value/>
+                        <displayName>Shape_Leng</displayName>
+                    </Data>
+                    <Data name="Shape_Area">
+                        <value/>
+                        <displayName>Shape_Area</displayName>
+                    </Data>
+                    <Data name="layer">
+                        <value>Vaslui</value>
+                        <displayName>layer</displayName>
+                    </Data>
+                    <Data name="path">
+                        <value>D:\2UCLAR\1Limite\Vaslui.shp|layername=Vaslui</value>
+                        <displayName>path</displayName>
+                    </Data>
+                </ExtendedData>
+                <MultiGeometry id="370">
+                    <Point id="372">
+                        <coordinates>27.719705812879546,46.648832885794235,0.0</coordinates>
+                    </Point>
+                    <Polygon id="374">
+                        <altitudeMode>clampToGround</altitudeMode>
+                        <outerBoundaryIs>
+                            <LinearRing id="378">
+                                <coordinates>27.66643661001287,46.6831079761106,0.0 27.772975015746216,46.6831079761106,0.0 27.772975015746216,46.614557795477886,0.0 27.66643661001287,46.614557795477886,0.0 27.66643661001287,46.6831079761106,0.0</coordinates>
+                            </LinearRing>
+                        </outerBoundaryIs>
+                    </Polygon>
+                </MultiGeometry>
+            </Placemark>
+        </Folder>
+    </Document>
+</kml>
