@@ -1,20 +1,21 @@
 library(terra)
 library(sf)
 library(lubridate)
+library(dplyr)
 ### drive windows sau mac 
-drive_d <- ifelse(Sys.info()[1] == "Darwin", "/Volumes/vld_z", "/D/")
+source("sources.R")
 
 ### citeste limitele 
 limite <- read_sf("Limite/Limite.shp")
 
-files <- list.files("/Volumes/Z_vld/sfica_proiect_NE/era5land/dailymerged",pattern = ".nc", recursive = T,  full.names = T)
+files <- list.files(paste0(drive_d,"dailymerged"),pattern = ".nc", recursive = T,  full.names = T)
 files <- grep("10m_v_component",files,invert = T, value = T)## elimina vantul 
 files.split <- do.call(rbind, strsplit(files, "\\/|_"))
-params <- paste0("/",unique(files.split[,10]))
-#params <- params[2]
+params <- c("/dewtemperature_daily_", "/dewtemperature_dailymin_","/temperature_daily_","/temperature_dailymin_","/temperature_dailymax_", "/precipitation_daily_")
+
 
 r <- rast(files[2])
-r <- r[[1:3]]
+#r <- r[[1:3]]
 timp <- as.Date(format(time(r), "%Y-%m-%d"))
 
 #### extragere poligon 
@@ -29,7 +30,7 @@ for( i in 1:nrow(limite)){
     print(params[j])
     files.sub <- grep(params[j], files,fixed = T, value = T)
     r <- rast(files.sub)
-    r <- r[[1:3]]
+    #r <- r[[1:3]]
     #timp <- as.character(format(time(r), "%Y-%m-%d %H:%M:%S"))
     timp <- as.Date(format(time(r), "%Y-%m-%d"))
     
@@ -47,7 +48,7 @@ for( i in 1:nrow(limite)){
     df <- cbind(df, df1[4]) 
   }
   
-  write.csv(df,paste0("/Volumes/Z_vld/sfica_proiect_NE/era5land/tabs/",nume,"_all_daily_1981-2021.csv"))
+  write.csv(df,paste0(drive_d,"tabs/poligon_all/",nume,"_all_daily_1981-2021.csv"))
   
 }
 

@@ -1,19 +1,22 @@
 library(terra)
 library(sf)
 library(lubridate)
+library(dplyr)
 library(tidyr)
+library(raster)
+source("sources.R")
 ####### puncte orase 
 pct <- read.csv("tabs/Orase_punct-central.csv", sep = ";")
 pct_sf <- st_as_sf(x= pct, coords = c("Lon","Lat"), crs = CRS("+init=epsg:4326"))
 
 ###### listeaza fisierele raster
-files <- list.files("/Volumes/Z_vld/sfica_proiect_NE/era5land/dailymerged",pattern = ".nc", recursive = T,  full.names = T)
-files <- grep("10m_v_component|precipitation",files,invert = T, value = T)## elimina vantul 
+files <- list.files(paste0(drive_d,"dailymerged"),pattern = ".nc", recursive = T,  full.names = T)
+files <- grep("10m_v_component",files,invert = T, value = T)## elimina vantul 
 files.split <- do.call(rbind, strsplit(files, "\\/|_"))
-params <- paste0("/",unique(files.split[,10]))
+params <- c("/dewtemperature_daily_", "/dewtemperature_dailymin_","/temperature_daily_","/temperature_dailymin_","/temperature_dailymax_", "/precipitation_daily_")
 
 ### obtine data frame cu data format
-r <- rast(files[2])
+r <- rast(files[3])
 timp <- as.Date(format(time(r), "%Y-%m-%d"))
 
 #### incepe loop pentru fiecare punct/oras_central
@@ -25,6 +28,7 @@ for( i in 1:nrow(pct_sf)){
   df1 <- data.frame(year = year(timp), month = month(timp), day = day(timp))
   #### incepe loop pentru fiecare parametru
   print(nume)
+  
   for(j in 1:length(params)){
     
     print(params[j])
@@ -38,6 +42,6 @@ for( i in 1:nrow(pct_sf)){
     df1 <- cbind(df1,tab[4])
   }
   
-  write.csv(df1,paste0("/Volumes/Z_vld/sfica_proiect_NE/era5land/tabs/",nume,"_punct_central_daily_1981-2021.csv"))
+  write.csv(df1,paste0(drive_d,"tabs/punct_central/",nume,"_punct_central_daily_1981-2021.csv"))
   
 }
