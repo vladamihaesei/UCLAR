@@ -12,9 +12,9 @@ for(i in 1:length(params)){
   
   print(params[i])
   files.sub <- grep(params[i], files, value = T)
-  oper <- ifelse(params[i]=="/precipitation", "cdo -b F64 -daysum -shifttime,-1sec -mulc,1000","cdo -b F64 -daymean -shifttime,-1sec -subc,273.15")
-  oper1 <- ifelse(params[i]=="/precipitation", "cdo -b F64 -daysum -shifttime,-1sec -mulc,1000","cdo -b F64 -daymax -shifttime,-1sec -subc,273.15")
-  oper2 <- ifelse(params[i]=="/precipitation", "cdo -b F64 -daysum -shifttime,-1sec -mulc,1000","cdo -b F64 -daymin -shifttime,-1sec -subc,273.15")
+  oper <- ifelse(params[i]=="/precipitation", "cdo -L -b F64 -mulc,1000 -selhour,00:00","cdo -b F64 -daymean -shifttime,-1sec -subc,273.15")
+  oper1 <- ifelse(params[i]=="/precipitation", "cdo -L -b F64 -mulc,1000 -selhour,00:00","cdo -b F64 -daymax -shifttime,-1sec -subc,273.15")
+  oper2 <- ifelse(params[i]=="/precipitation", "cdo -L -b F64 -mulc,1000 -selhour,00:00","cdo -b F64 -daymin -shifttime,-1sec -subc,273.15")
   
   for ( j in 1:length(files.sub)){
     
@@ -30,11 +30,11 @@ for(i in 1:length(params)){
 
 ########verificare
 ### horuly
-vf <- rast("/Volumes/Z_vld/sfica_proiect_NE/era5land/scripts/python/precipitation_hourly_1981-1991.nc")
-plot(vf[[100:125]])
+vf <- rast(paste0(drive_d,"scripts/python/precipitation_hourly_1981-1991.nc"))
+plot(vf[[46:58]])
 ### daily 
-vf1 <- rast("/Volumes/Z_vld/sfica_proiect_NE/era5land/daily/dewtemperature_daily_1981-1991.nc")
-plot(vf1[[1:16]])
+vf1 <- brick(paste0(drive_d,"daily/precipitation_dailymax_1981-1991.nc"))
+plot(vf1[[3654:3670]])
 
 vf2 <- rast("/Volumes/Z_vld/sfica_proiect_NE/era5land/daily/temperature_daily_1981-1991.nc")
 plot(vf2[[1:16]])
@@ -42,11 +42,15 @@ plot(vf2[[1:16]])
 vf3 <- rast("/Volumes/Z_vld/sfica_proiect_NE/era5land/daily/precipitation_daily_1981-1991.nc")
 plot(vf3[[17:30]])
 
-######
+###### daily 
 vf4 <- rast("/Volumes/Z_vld/sfica_proiect_NE/era5land/scripts/python/precip_daysum_conv.nc")
 plot(vf4[[210]])
 plot(limite.sub, add = T, col = "transparent")
 
+v <- brick(vf[[1]])
+vf5 <-raster:: brick("~/Downloads/test_era5land.nc")
+vf5 <- resample(vf5, v, method = "ngb")
+vf5[is.na(v)] <- NA
 
-
-
+plot(vf5)
+plot(vf1)
