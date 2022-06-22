@@ -4,7 +4,7 @@ source("sources.R")
 files <- list.files(paste0(drive_d,"daily"),pattern = ".nc", recursive = T,  full.names = T)
 files <- grep("10m_v_component",files,invert = T, value = T)## elimina vantul 
 files.split <- do.call(rbind, strsplit(files, "\\/|_"))
-params <- c("/dewtemperature_daily_", "/dewtemperature_dailymin_","/temperature_daily_","/temperature_dailymin_","/temperature_dailymax_", "/precipitation_daily_")
+params <- c("/dewtemperature_daily_", "/dewtemperature_dailymin_","/temperature_daily_","/temperature_dailymin_","/temperature_dailymax_", "/precipitation_daily_","/radiation_daily_","/lcc_daily_","/tcc_daily_")
 
 for(i in 1:length(params)){
   
@@ -22,7 +22,7 @@ library(terra)
 library(sf)
 limite <- read_sf("Limite/Limite.shp")
 urban <- read_sf("Limite/Utilizare.shp")
-vf <- rast(paste0(drive_d,"daily/precipitation_daily_1981-1991.nc"))
+vf <- rast(paste0(drive_d,"daily/radiation_daily_1981-1991.nc"))
 plot(vf[[1]])
 plot(urban,add =T, col = "transparent")
 plot(limite,add =T, col = "transparent")
