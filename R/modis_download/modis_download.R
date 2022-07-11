@@ -12,7 +12,7 @@ limite <- read_sf("Limite/Limite.shp")
 for (i in 1:length(limite)){
   
   limite1 <- limite[i,]
-  nume <- limite1$Name
+  nume <- limite1$Drawings
   bb <- st_bbox(limite1)
   
   path <- paste0('/Volumes/Z_vld/sfica_proiect_NE/',nume)
