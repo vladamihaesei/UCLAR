@@ -8,14 +8,13 @@ MODIStsp_get_prodlayers("M*D11A1")$bandnames
 
 limite <- read_sf("Limite/Limite.shp")
 
-
 for (i in 1:length(limite)){
   
   limite1 <- limite[i,]
   nume <- limite1$Drawings
   bb <- st_bbox(limite1)
   
-  path <- paste0('/Volumes/Z_vld/sfica_proiect_NE/',nume)
+  path <- paste0('/Volumes/Z_vld/sfica_proiect_NE/',nume) 
   if (!dir.exists(path)) dir.create(path, recursive = T)
   
   MODIStsp(gui             = FALSE,
@@ -42,9 +41,7 @@ for (i in 1:length(limite)){
 }
 
 
-
 ### verificare fisiere 
-
 files <- list.files("/Volumes/Z_vld/sfica_proiect_NE/Surf_Temp_Daily_1Km_v6/LST_Day_1km", pattern = ".tif",full.names = T)
 
 vf <- terra::rast(files)
