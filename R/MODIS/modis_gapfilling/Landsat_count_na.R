@@ -7,11 +7,12 @@ all <- list.files(path = "tmp/", pattern = "*.tif", recursive = T, full.names = 
 
 nume <-  unique(do.call(rbind,strsplit(all,"/"))[,3])
 dn <- c("Day","Night")
+
+
 for(n in 1:length(nume)){
   
   for(d in 1:length(dn)){
     
-  
     files <- list.files(path = paste0("tmp/",nume[n],"/Surf_Temp_Daily_1Km_v6/LST_",dn[d],"_1km"), pattern = "*.tif", recursive = T, full.names = T )
     files.sub <- grep("MOD11A1",files, value =T)## Aqua
     files.sub1 <- grep("MYD11A1",files, value =T)##Terra 
@@ -39,8 +40,7 @@ for(n in 1:length(nume)){
   
 }
 
-
-
+##### MYD11A1
 tab1 <- NULL
 
 for(i in 1:length(files.sub1)){
@@ -59,21 +59,3 @@ tot <- rbind(tab,tab1)
 tot <- tot%>%mutate(year  = format(timp,"%Y"),
                     month = format(timp,"%m"))
 write.csv(tot,"tabs/count_na_Botosani.csv", row.names =F)
-
-tot.f <- tot%>%filter(!frecventa %in%c(0,100))
-
-g  <- ggplot(tot.f, aes(x= frecventa))+
-  geom_histogram(color="darkblue", fill="lightblue")+facet_wrap(~tip)+theme_bw()+
-  scale_x_continuous(expand = c(0, 0))+scale_y_continuous(expand = c(0, 0))
-g
-png("png/histrogam_countNA_Baotosani.png", width = 1500, height = 1300, res = 200)
-g
-dev.off()
-
-g1 <- ggplot(tot.f, aes(x= frecventa))+
-  geom_histogram(color="darkblue", fill="lightblue")+facet_grid(month~tip)+theme_bw()+
-scale_x_continuous(expand = c(0, 0))+scale_y_continuous(expand = c(0, 0))
-
-png("png/histrogam_monthly_countNA_Barlad.png", width = 1800, height = 1400, res = 230)
-g1
-dev.off()
