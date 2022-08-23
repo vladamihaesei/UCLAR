@@ -4,6 +4,8 @@ library(raster)
 ### trebuie sa creezi un
 files <- list.files("tmp", pattern = ".nc",full.names = T, recursive = T) ### afiseasaza toate fisierele format nc ### schimbat calea
 
+
+
 #### lista cu orasele
 
 orase <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
@@ -23,9 +25,9 @@ for ( o in 1:length(orase)){
     
     for(i in 1:nlyr(r)){
       
-      r1 <- terra::rast(r[[i]])
-      #r1 <- raster::brick(r[[i]])
-      timp <- format(as.Date(time(r1)),"%Y%m%d")
+      r11 <- terra::rast(r[[i]])
+      r1 <- raster::brick(r[[i]])
+      timp <- format(as.Date(time(r11)),"%Y%m%d")
       #timp <- format(raster::getZ(r1), "%Y%m%d")
       print(timp)
       
@@ -33,7 +35,7 @@ for ( o in 1:length(orase)){
       
       if (!dir.exists(path10)) dir.create(path10,recursive = T) ### aici se defineste calea 
       
-      raster::writeRaster(raster(r1), paste0(path10, timp, ".tif"))
+      raster::writeRaster(r1, paste0(path10, timp, ".tif"),overwrite = T)
       #terra::writeRaster(r1, paste0(path10, timp, ".tif"), overwrite = T, gdal=c("COMPRESS=DEFLATE", "TFW=YES"))
       
     }
@@ -44,5 +46,8 @@ for ( o in 1:length(orase)){
 
 ### verificare
 
-fg <- terra::rast("grids/Falticeni/Surf_Temp_daily_1km_v6/20190109.tif")
+fg <- terra::rast("grids/Falticeni/Surf_Temp_daily_1km_v6/LST_Day_1km/20190105.tif")
+plot(fg)
 
+fg1 <- raster::brick(files, varname = "LST_Night_1km")
+plot(fg1)
