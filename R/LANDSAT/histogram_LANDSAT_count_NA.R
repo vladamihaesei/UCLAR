@@ -1,6 +1,7 @@
 library(ggplot2)
 library(dplyr)
 library(scales)
+
 orase <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")
 

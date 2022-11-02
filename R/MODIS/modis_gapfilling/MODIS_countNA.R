@@ -8,7 +8,6 @@ all <- list.files(path = "tmp/", pattern = "*.tif", recursive = T, full.names = 
 nume <-  unique(do.call(rbind,strsplit(all,"/"))[,3])
 dn <- c("Day","Night")
 
-
 for(n in 1:length(nume)){
   
   for(d in 1:length(dn)){
@@ -36,8 +35,6 @@ for(n in 1:length(nume)){
     
   }
 
-  
-  
 }
 
 ##### MYD11A1
