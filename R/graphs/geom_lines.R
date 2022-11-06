@@ -1,38 +1,34 @@
 library(ggplot2)
 library(dplyr)
-library(ggrepel)
+library(RColorBrewer)
+require(patchwork)
 
-df <- read.csv("tabs/ERA5/params_1981-2021_daily_v2.csv") %>% group_by(Year,Month,loc,param)%>%
-  summarise(medie = ifelse(param !="Precipitation", mean(value, na.rm = T), sum(value,na.rm = T)))%>%group_by(Month,loc,param)%>%
-  summarise(medie = mean(medie))
+df <- read.csv("tabs/ERA5/params_1981-2021_daily_v2.csv") %>% group_by(Year,loc,param)%>%
+  summarise(medie = ifelse(param !="Precipitation", mean(value, na.rm = T), sum(value,na.rm = T)))%>%group_by(loc,param)%>%
+  mutate(medie_91_2020 = mean(medie[Year >1990 & Year <=2020]),
+    anom_91_2020 = ifelse(param!= "Precipitation", medie- medie_91_2020, (medie*100/medie_91_2020)-100))
 
-gh <- ggplot(df) +
-  geom_line(aes(as.factor(Month), medie, group = loc,color = loc))+
-  facet_wrap(~param, scales = "free_y",strip.position = "left",labeller = as_labeller(c(
-                                                                Precipitation = "mm",Radiation ="J/m2",
-                                                              
-                                                                Tmax = "C",
-                                                                Tmin = "C",
-                                                                Tmed = "C"
-                                                                ) ))+
-               theme(legend.position = "none")
-gh
-strip.position = "left", 
-labeller = as_labeller(c(A = "Currents (A)", V = "Voltage (V)") ) 
+df.sub <- df%>%filter(loc == "Vaslui")
 
-library(tidyverse)
-library(reshape2)
-x <- seq(0, 10, by = 0.1)
-y1 <- sin(x)
-y2 <- sin(x + pi / 4)
-y3 <- cos(x)
+col_strip <- brewer.pal(11, "RdBu")
 
-my.df <-
-  data.frame(
-    time = x,
-    currentA = y1,
-    currentB = y2,
-    voltage = y3
-  )
-my.df <- melt(my.df, id.vars = "time")
-my.df$Unit <- as.factor(rep(c("A", "A", "V"), each = length(x)))
+gh <-  ggplot(df.sub,
+              aes(x = Year, y = 1, fill = medie))+
+  geom_tile() +
+  scale_fill_gradientn(colors = rev(col_strip)) +
+  guides(fill = guide_colorbar(barwidth = 1)) +
+  theme_void()+facet_wrap(~param)
+
+gg_l = lapply(df.sub, function(x) {
+  ggplot(df.sub,
+         aes(x = Year, y = .5, fill = anom_91_2020))+
+    geom_tile() +
+    scale_fill_gradientn(colors = rev(col_strip)) +
+    guides(fill = guide_colorbar(barwidth = .5)) +
+    theme_bw()+facet_wrap(~param, scales = "y_free")
+})
+
+# patchwork
+png("png/raportare/warp_plots_anomalies.png", height = 2300, width = 2500, res = 240)
+wrap_plots(gg_l, ncol = 3)
+dev.off()

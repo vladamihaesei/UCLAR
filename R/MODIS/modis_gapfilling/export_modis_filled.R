@@ -44,9 +44,9 @@ for( i in 1:length(orase)){
 for( i in 9:length(orase)){
   
   print(orase[i])
-  files <- list.files(paste0("grids/MODIS/nc/filled/LST_Day_1km/",orase[i],"/MYD11A1Day_2000-2020"), pattern = ".tif", recursive = T, full.names = T)
+  files <- list.files(paste0("grids/MODIS/nc/filled/LST_Day_1km/",orase[i],"/MYD11A1_Day_2000-2020"), pattern = ".tif", recursive = T, full.names = T)
   
-  files1 <- list.files(paste0("grids/MODIS/nc/filled/LST_Night_1km/",orase[i],"/MYD11A1Night_2000-2020"), pattern = ".tif", recursive = T, full.names = T)
+  files1 <- list.files(paste0("grids/MODIS/nc/filled/LST_Night_1km/",orase[i],"/MYD11A1_Night_2000-2020"), pattern = ".tif", recursive = T, full.names = T)
   
   files <- files[1]### elimina extensia aux.xml
   files1 <- files1[1]### elimina extensia aux.xml

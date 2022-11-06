@@ -1,5 +1,7 @@
 #### incepere plotare###
 library(ggridges)
+library(ggplot2)
+library(dplyr)
 theme_set(theme_ridges())
 
 tabs <- read.csv("tabs/ERA5/params_1981-2021_daily.csv")%>%mutate(param = sub(" ","",param))
@@ -38,7 +40,7 @@ for(i in 1:length(params)){
           aes(fill = ..x..), scale = 3.5, size = 0.5,rel_min_height = 0.01) +
         scale_fill_gradientn(colours = cul[[i]],name = d$sign[i], limits = c(-40,40))+
         labs(x ="", y = "", title = d$denumire[i],
-             caption = "@UCLAR|Data Source:ERA5-Land")+
+             caption = "@UCLAR")+
         scale_x_continuous(expand = c(0, 0)) +
         scale_y_discrete(expand = c(0, 0))+ 
         theme(axis.text = element_text(size = 15),
@@ -58,7 +60,7 @@ for(i in 1:length(params)){
         scale_fill_gradientn(colours = cul[[i]],name = d$sign[i])+
        
         labs(x ="", y = "", title = d$denumire[i],
-             caption = "@UCLAR|Data Source:ERA5-Land")+
+             caption = "@UCLAR")+
         scale_x_continuous(expand = c(0, 0)) +
         scale_y_discrete(expand = c(0, 0))+ 
         theme(axis.text = element_text(size = 15),
