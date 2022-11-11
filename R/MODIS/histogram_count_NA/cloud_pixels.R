@@ -26,7 +26,7 @@ for(n in 1:length(nume)){
       
       tab <- NULL
       
-      for(i in 1:length(files.sub1[1:6])){
+      for(i in 1:length(files.sub1)){
         
         print(dats[i])
         rss <- terra::rast(files.sub1[i])
@@ -37,14 +37,15 @@ for(n in 1:length(nume)){
      
       }
 
+      out.path <- paste0("tabs/MODIS/",nume[n],"/",mod[m],"/")
+      if(!dir.exists(out.path)) dir.create(out.path,recursive = T)
+      write.csv(tab,paste0(out.path, dn[d],"_cloud_pixels.csv"))
+      
     }
+    
+    
   }
-  out.path <- paste0("tabs/MODIS/",nume[n],"/",mod[m],"/")
-  if(!dir.exists(out.path)) dir.create(out.path,recursive = T)
-  write.csv(tab,paste0(out.path, dn[d],"_cloud_pixels.csv"))
+  
 }
 
 
-
-
-vf <- terra::plot(rast(files.sub1[1:4]))

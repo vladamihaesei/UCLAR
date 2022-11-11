@@ -5,19 +5,17 @@ library(seas)
 library(RColorBrewer)
 library(ggspatial)
 library(sf)
+library(metR)
 
 orase <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")
 uat <- readRDS("shp/uat_ro.rds")%>%filter(county %in% c("Vaslui","Iași","Neamț","Botoșani","Suceava","Bacău"))
-uat.f <- uat%>%filter(name == "Bârlad")
-
-# create bbox from our nc layer and expand it to include more area above/below
-bbox <- expand_bbox(st_bbox(uat.f), X = 0, Y = 150000)
+uat.f <- uat%>%filter(name == "Bacău")
 
 #### pentru legenda
 #### culori all seasons 
 rmean <- colorRampPalette(rev(c(brewer.pal(9,"RdYlBu"))), interpolate="linear")
-brks.mean <- seq(-4,28, by = .5)
+brks.mean <- seq(-4,28.8, by = .2)
 cols.mean <- rmean(length(brks.mean) - 1)
 lim.mean <- c(-4.5,28.5)
 den <- "°C"
@@ -25,10 +23,12 @@ den <- "°C"
 for(o in 1:length(orase)){
   
   print(orase[o])
-  night_day <- c("Night", "Day")
+  
+  night_day <- c("Day","Night")
   df <- NULL
   tt <- NULL
   for(d in 1: length(night_day)){
+    
     print(night_day[d])
     mod <- c("MOD11A1","MYD11A1")
     for(m in 1:length(mod)){
@@ -50,6 +50,7 @@ for(o in 1:length(orase)){
       df <- rbind(df,df.r)
       
     }
+
     
   }
   
@@ -59,31 +60,40 @@ for(o in 1:length(orase)){
   # 
   # vf.r <- terra::rast("grids/MODIS/tif/nonfilled/MYD11A1/LST_Night_1km/Barlad/2003-08-12.tif")
   # plot(vf.r)
-
-  ### calculeaza media ponderata se complica treaba 
   
+  ### calculeaza media ponderata se complica treaba 
   df.myd <- tt%>%filter(frecventa <= 20 & tip == "MYD11A1")
   df.mod <- tt%>%filter(frecventa <= 20 & tip == "MOD11A1")
   
   df.s1 <- df%>%group_by(x,y,ind,per,tip)%>%summarise(values.mean.myd = ifelse(tip == "MYD11A1",mean(values*((nrow(df.myd)/nrow(tt)))),mean(values*((nrow(df.mod)/nrow(tt))))))%>%
-                group_by(x,y,ind,per)%>%summarise(values.mean = sum(values.mean.myd))
+    group_by(x,y,ind,per)%>%summarise(values.mean = sum(values.mean.myd))
   
   df.seas <- df.s1%>%mutate(seas = mkseas(ind, width = "DJF"))%>%group_by(x,y,per,seas)%>% summarise(mean.seas = mean(values.mean))
   
-  ##### all seasons 
+  df.seas.sub <- df.seas%>%filter(per =="Day")
+  
   gg <- ggplot(df.seas)+
-    geom_raster(aes(x = x, y = y, fill = mean.seas))+
-    geom_sf(data = uat, fill= "transparent",color = "black", size = 0.4) +
-    #base_map(bbox, increase_zoom = 7, basemap = 'mapnik')+
+    
+    geom_contour_fill(aes(x,y,z= mean.seas, fill = stat(level)),breaks = MakeBreaks(1))+
+    #geom_contour2( aes(x,y,z = mean.seas),binwidth = 5,skip = .2)+
+    #metR::geom_text_contour(aes(x,y,z = mean.seas),stroke  = 0.1,skip = .1,rotate = T,check_overlap = T,size = 8)+
+    geom_sf(data = uat, fill= "transparent",color = "black", size = 0.4)+
     coord_sf(xlim = c(min(df.seas$x)-.02,max(df.seas$x)+.02), ylim = c(min(df.seas$y)-.02, max(df.seas$y)+.02), expand = F)+
-    scale_x_discrete(expand = c(0, 0)) +
+    scale_x_discrete(expand = c(0, 0))+
     scale_y_discrete(expand = c(0, 0))+
-    scale_fill_stepsn(colours = cols.mean, name = den,
-                      breaks = brks.mean,
-                      limits =lim.mean) +                   
-    guides(fill = guide_colourbar(barwidth =44.0, barheight = 0.8, title.position = "right",
-                                  label.theme = element_text(size =9, angle = 75, hjust = 1))) +
-    scale_linetype_manual(values=c("twodash")) +xlab("")+ylab("")+theme_minimal()+
+    scale_alpha(guide = "none") +
+    scale_fill_divergent_discretised(high = "#b2182b",mid = "#ffffbf",low = "#225ea8",name = "°C",midpoint = 15)+
+     #scale_fill_distiller(palette="RdYlBu", direction=-1, na.value="transparent", limits=lim.mean, breaks=brks.mean, 
+      #                   guide=guide_colorsteps(ticks=TRUE, show.limits = TRUE), oob=squish) +
+    # scale_fill_stepsn(colours = cols.mean, name = den,
+    #                   breaks = brks.mean,
+    #                   limits =lim.mean)+
+    #scale_fill_divergent_discretised(colours = cols.mean, name = den, breaks = brks.mean,limits =lim.mean )+
+    
+    guides(fill = guide_colourbar(barwidth =40.0, barheight = 0.8, title.position = "right",
+                                  label.theme = element_text(size =12))) +
+    
+    scale_linetype_manual(values=c("twodash")) +xlab("")+ylab("")+theme_bw()+
     theme(legend.position = "bottom",
           legend.title=element_text(size=12.0),
           text = element_text(size=12.5),
@@ -91,7 +101,8 @@ for(o in 1:length(orase)){
           strip.background = element_rect(colour = "black", fill = "white"),
           panel.background = element_rect(fill = "#E4E5E9"),#EAF7FA
           panel.border = element_rect(colour = "black", fill = "transparent"))+facet_grid(per~seas)
-  png(paste0("png/MODIS/maps/all_seasons_",orase[o],".png"), height = 1800, width = 2400, res = 220 )
+  
+  png(paste0("png/MODIS/maps/all_seasons_",orase[o],".png"), height = 1600, width = 2600, res = 220)
   print(gg)
   dev.off()
   system(paste0("convert -trim ", "png/MODIS/maps/all_seasons_",orase[o],".png"," png/MODIS/maps/all_seasons_",orase[o],".png"))
@@ -100,51 +111,29 @@ for(o in 1:length(orase)){
   sez = c("DJF","MAM","JJA","SON")
   
   for(s in 1:length(sez)){
-   
+    
     print(sez[s])
     test <- df.seas%>%filter(seas==sez[s])
     
-    if(sez[s]=="DJF"){
-      
-      rmean1 <- colorRampPalette(rev(c(brewer.pal(9,"RdYlBu"))), interpolate="linear")
-      brks.mean1 <- seq(-3.5,2.3, by = .2)
-      cols.mean1 <- rmean1(length(brks.mean1) - 1)
-      lim.mean1 <- c(-3.7,2.6)
-      
-    }else if(sez[s]=="MAM"){
-      
-      rmean1 <- colorRampPalette(rev(c(brewer.pal(9,"RdYlBu"))), interpolate="linear")
-      brks.mean1 <- seq(3,20, by = .5)
-      cols.mean1 <- rmean1(length(brks.mean1) - 1)
-      lim.mean1 <- c(2.5,20.5)
-      
-    }else if(sez[s] == "JJA"){
-      
-      rmean1 <- colorRampPalette(rev(c(brewer.pal(9,"RdYlBu"))), interpolate="linear")
-      brks.mean1 <- seq(11,28, by = .5)
-      cols.mean1 <- rmean1(length(brks.mean1) - 1)
-      lim.mean1 <- c(10.5,28.5)
-      
-    }else{
-  
-      rmean1 <- colorRampPalette(rev(c(brewer.pal(9,"RdYlBu"))), interpolate="linear")
-      brks.mean1 <- seq(5,18, by = .5)
-      cols.mean1 <- rmean1(length(brks.mean1) - 1)
-      lim.mean1 <- c(4.5,18.5)
-    
-    }
-    
     gg1 <- ggplot(test)+
-      geom_raster(aes(x = x, y = y, fill = mean.seas))+
+      
+      geom_contour_fill(aes(x,y,z= mean.seas, fill = stat(level)),breaks = MakeBreaks(1))+
+      #geom_contour2( aes(x,y,z = mean.seas),binwidth = 5,skip = .2)+
+      #metR::geom_text_contour(aes(x,y,z = mean.seas),stroke  = 0.1,skip = .1,rotate = T,check_overlap = T,size = 8)+
       geom_sf(data = uat, fill= "transparent",color = "black", size = 0.4)+
       coord_sf(xlim = c(min(df.seas$x)-.02,max(df.seas$x)+.02), ylim = c(min(df.seas$y)-.02, max(df.seas$y)+.02), expand = F)+
       scale_x_discrete(expand = c(0, 0))+
       scale_y_discrete(expand = c(0, 0))+
-      scale_fill_stepsn(colours = cols.mean1, name = den,
-                        breaks = brks.mean1,
-                        limits =lim.mean1) +                   
-      guides(fill = guide_colourbar(barwidth =42.0, barheight = 0.8, title.position = "right",
-                                    label.theme = element_text(size =9, angle = 75, hjust = 1))) +
+      scale_alpha(guide = "none") +
+      scale_fill_divergent_discretised(high = "#b2182b",mid = "#ffffbf",low = "#225ea8",name = "°C",midpoint = 14)+
+      #scale_fill_distiller(palette="RdYlBu", direction=-1, na.value="transparent", limits=lim.mean, breaks=brks.mean, 
+      #                   guide=guide_colorsteps(ticks=TRUE, show.limits = TRUE), oob=squish) +
+      # scale_fill_stepsn(colours = cols.mean, name = den,
+      #                   breaks = brks.mean,
+      #                   limits =lim.mean)+
+      #scale_fill_divergent_discretised(colours = cols.mean, name = den, breaks = brks.mean,limits =lim.mean )+
+      guides(fill = guide_colourbar(barwidth =40.0, barheight = 0.8, title.position = "right",
+                                    label.theme = element_text(size =12)))+
       scale_linetype_manual(values=c("twodash")) +xlab("")+ylab("")+theme_bw()+
       theme(legend.position = "bottom",
             legend.title=element_text(size=12.0),
