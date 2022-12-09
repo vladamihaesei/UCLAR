@@ -10,9 +10,10 @@ library(raster)
 library(sp)
 
 orase <- c("Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
-           "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")# "Barlad","Bacau",
+           "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")#"Barlad","Bacau",
 
-##### MOD11A1
+orase <- "Pascani"
+
 for (i in 1:length(orase)){
   
   print(orase[i])

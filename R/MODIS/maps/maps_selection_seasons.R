@@ -10,7 +10,7 @@ library(metR)
 orase <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")
 uat <- readRDS("shp/uat_ro.rds")%>%filter(county %in% c("Vaslui","Iași","Neamț","Botoșani","Suceava","Bacău"))
-uat.f <- uat%>%filter(name == "Bacău")
+uat.f <- uat%>%filter(name == "Pașcani")
 
 #### pentru legenda
 #### culori all seasons 
@@ -24,7 +24,7 @@ for(o in 1:length(orase)){
   
   print(orase[o])
   night_day <- c("Day","Night")
-  prag <- seq(0,90,10)
+  prag <- 50
   
   for(p in 1:length(prag)){
     
@@ -76,7 +76,7 @@ for(o in 1:length(orase)){
     #geom_contour2( aes(x,y,z = mean.seas),binwidth = 5,skip = .2)+
     #metR::geom_text_contour(aes(x,y,z = mean.seas),stroke  = 0.1,skip = .1,rotate = T,check_overlap = T,size = 8)+
     geom_sf(data = uat, fill= "transparent",color = "black", size = 0.4)+
-    coord_sf(xlim = c(min(df.seas$x)-.01,max(df.seas$x)+.01), ylim = c(min(df.seas$y)-.01, max(df.seas$y)+.01), expand = F)+
+    coord_sf(xlim = c(min(df.seas$x),max(df.seas$x)), ylim = c(min(df.seas$y), max(df.seas$y)), expand = F)+
     scale_x_discrete(expand = c(0, 0))+
     scale_y_discrete(expand = c(0, 0))+
     scale_alpha(guide = "none") +

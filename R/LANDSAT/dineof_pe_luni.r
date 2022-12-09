@@ -32,6 +32,8 @@ for (i in 1:length(scene)){
     #files.sub <- files[which(format(dates,"%Y")==ani[i])]
     
     rss <- raster::stack(files.sub)
+    #rss <- parallel::mclapply(files.sub, function(i){raster::stack(r(i)}, mc.cores = 5)
+  
     rss[is.na(rss)]<- NA
 
     dates1 <- as.Date(format(as.Date(do.call(rbind,strsplit(files.sub,"_|/|.tif"))[,6], "%Y%m%d"), "%Y-%m-%d"))
@@ -45,7 +47,6 @@ for (i in 1:length(scene)){
     if (!dir.exists(out)) dir.create(out, recursive = T)
     
     write.rts(rasterts_dineof, paste0(out,ani[j]))
-    
-  }
+   
 
 }

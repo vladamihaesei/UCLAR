@@ -2,6 +2,8 @@ library(terra)
 
 orase <- c("Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")#"Barlad","Bacau",
+
+orase <- "Pascani"
 ##### MOD11A1 & MYD11A1
 for( i in 1:length(orase)){
   
