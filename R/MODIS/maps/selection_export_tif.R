@@ -79,7 +79,9 @@ for(o in 1:length(orase)){
 
 #### verificare 
 
-vf <- terra::rast(list.files("grids/MODIS/filled_selection/Barlad/", pattern = ".tif", full.names = T))
+vf <- terra::rast(list.files("grids/MODIS/filled_selection/Radauti/", pattern = ".tif", full.names = T))
+
+
 terra::plot(vf)
 
 #### pascani problem 
