@@ -1,7 +1,7 @@
 library(remotes)
-remotes::install_github("ffilipponi/rtsa")
+#remotes::install_github("ffilipponi/rtsa")
 #install.packages("https://github.com/ffilipponi/rtsa.git")
-install.packages("https://github.com/marchtaylor/sinkr")
+#install.packages("https://github.com/marchtaylor/sinkr")
 #install_github("marchtaylor/sinkr")
 library(sinkr) 
 library(rtsa)
@@ -9,7 +9,7 @@ library(rgdal)
 library(raster)
 library(sp)
 
-orase <- c("Bacau", "Botosani","Iasi","PiatraNeamt") #
+orase <- c("Bacau","Botosani","Iasi","PiatraNeamt") #
 
 ##### MOD11A1
 for (i in 1:length(orase)){
@@ -26,7 +26,7 @@ for (i in 1:length(orase)){
       
     files <- list.files(paste0("grids/MODIS/tif/CopyOfnonfilled/",types[j],"/LST_",dn[d],"_1km/",orase[i]), full.names = T, pattern = ".tif")
     files <- grep(".aux.json", files,value = T, invert = T)
-    files <- grep("2020|2021", files, value = T)
+    files <- grep("2019-|2020-|2021-", files, value = T)
     
     rr1 <- terra::rast(files)# citeste cu raster, cateodata salveaza data time
     r1 <- raster::stack(files)# citeste cu raster, cateodata salveaza data time
@@ -50,7 +50,7 @@ for (i in 1:length(orase)){
     if (!dir.exists(out1)) dir.create(out1, recursive = T)
     
     #write.rts(rasterts_dineof, paste0(out,"MOD11A1_Day_2000-2020"))t
-    write.rts(rasterts_dineof1, paste0(out1,types[j],"_",dn[d],"_2020-2021"), overwrite = T)
+    write.rts(rasterts_dineof1, paste0(out1,types[j],"_",dn[d],"_2019-2021"), overwrite = T)
     
     }
   }
