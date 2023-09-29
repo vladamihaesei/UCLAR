@@ -3,18 +3,20 @@ library(dplyr)
 
 orase <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")
+
+orase <- c("Bacau","Iasi","Botosani","PiatraNeamt") ## Pascani 
+
 ### metoda 1
 for (p in 1:length(orase)){
   
-  fl <- list.files(paste0("/Volumes/Z_vld/sfica_proiect_NE/Landsat/Landsat_",orase[o],"_LST_T-20220725T095615Z-001/Landsat_",orase[o],"_LST_T/"), full.names = T, pattern = ".tif")
-  
+  #fl <- list.files(paste0("/Volumes/Z_vld/sfica_proiect_NE/Landsat/Landsat_",orase[o],"_LST_T-20220725T095615Z-001/Landsat_",orase[o],"_LST_T/"), full.names = T, pattern = ".tif")
+  fl <- list.files(paste0("grids/LANDSAT/data_2/",orase[p], "/winter"), full.names = T, pattern = ".tif")
   ## tasteaza in consola p=1, dupa incepe sa rulezi de la fl, adica linia 9 ### nu da for la toata bucla
   #ruleaza linia de dedesubt - unique(do.call(rbind, strsplit(fl,"/|_|.tif"))) - scoate diezul. Dupa ce ruleaza
   # trebuie schimbat numarul 20 din linia 17. In functie de locatia fisierelor. 
- 
-  #unique(do.call(rbind, strsplit(fl,"/|_|.tif"))) 
   
-  dats <- as.Date(unique(do.call(rbind, strsplit(fl,"/|_|.tif"))[,20]), format = "%Y%m%d")
+  #unique(do.call(rbind, strsplit(fl,"/|_|.tif"))) 
+  dats <- as.Date(unique(do.call(rbind, strsplit(fl,"/|_|.tif"))[,9]), format = "%Y%m%d")
   dats1 <- sort(dats)
   
   f <- terra::rast(fl)
@@ -35,11 +37,12 @@ for (p in 1:length(orase)){
     
   }
   
-  tab <- tab%>%dplyr::mutate(year = format(timp,"%Y"),
-                      month = format(timp,"%m"))
-  
-  write.csv(tab,paste0("tabs/LANDSAT/countNA_",orase[o],".csv"), row.names = F)## exporta fisier csv cu frecventa acoperirii
-  
+  tab.f <- tab%>%filter(frecventa <=0.15)
+
+  write.csv(tab,paste0("tabs/LANDSAT/countNA_",orase[p],"_winter.csv"), row.names = F)## exporta fisier csv cu frecventa acoperirii
+
+}
+
   #### aici poti modifica pragul
   tab.f <- tab%>%dplyr::filter(frecventa >=80) ### filtru pentru lipsuri mai mari sau egali de 80%
   

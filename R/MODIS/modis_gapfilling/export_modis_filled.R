@@ -3,7 +3,7 @@ library(terra)
 orase <- c("Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")#"Barlad","Bacau",
 
-orase <- "Pascani"
+orase <- "Suceava2"
 ##### MOD11A1 & MYD11A1
 for( i in 1:length(orase)){
   
@@ -11,7 +11,7 @@ for( i in 1:length(orase)){
   types <- c("MOD11A1","MYD11A1")
   for(k in 1:length(types)){
     
-    dn <- c("Night")#"Day",
+    dn <- c("Day")#"Night",
     
     for(l in 1:length(dn)){
       
@@ -32,3 +32,5 @@ for( i in 1:length(orase)){
   }
   
 }
+
+

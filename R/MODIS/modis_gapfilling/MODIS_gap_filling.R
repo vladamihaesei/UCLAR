@@ -12,7 +12,7 @@ library(sp)
 orase <- c("Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")#"Barlad","Bacau",
 
-orase <- "Pascani"
+orase <- "Suceava2"
 
 for (i in 1:length(orase)){
   

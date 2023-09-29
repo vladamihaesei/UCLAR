@@ -6,7 +6,9 @@ library(terra)
 library(sinkr)
 library(rtsa)
 library(dplyr)
-orase <- c("Bacau","Botosani","PiatraNeamt") #"Iasi"
+library(tidyr)
+orase <- c("Bacau","Botosani","PiatraNeamt") #
+
 df <- NULL
 for (i in 1:length(orase)){
   df1 <- NULL
@@ -42,8 +44,9 @@ for (i in 1:length(orase)){
       
       t1 <- as.data.frame(rorg,xy =T)%>%pivot_longer(-c(x,y), names_to = "ind_org", values_to = "org")%>%na.omit()%>%dplyr::select(org)
       t2 <- as.data.frame(rfill.sel, xy = T)%>%pivot_longer(-c(x,y), names_to = "ind_fill", values_to = "fill")%>%na.omit()%>%dplyr::select(fill)
-      tt <- cbind(t1,t2)
-  
+      tt <- cbind(t1,t2[1:length(nrow(t1)),])
+      #tt <- left_join(t1,t2)
+      
       ff <- tt%>%dplyr::mutate(Oras = orase[i], Tip = types[j], Dn = dn[d])
       
       lm_eqn <- function(tt){
@@ -69,11 +72,6 @@ dns <- ggplot(tt, aes(x=x, y=y)) + geom_smooth(method = "lm", se = FALSE)+geom_p
   geom_text(x = 6.5, y = 10, label = lm_eqn(tt), parse = TRUE)+theme_bw()+xlab("Originale (°C)")+ylab("Reconstruite (°C)")+theme(text = element_text(size=14.),
                                                                                                                                  axis.text = element_text(size = 15.5))
 
-summarise(RMSE = rmse(x,y),
-          R  = cor(x,y)
-          BIAS = bias(x,y))
-          
-
 png(paste0("png/MODIS/AIC_article/scatterplot_validation",".png"), height = 800, width = 1000, res = 230)
 dns
 dev.off()
@@ -81,7 +79,4 @@ system(paste0("convert -trim ", "png/MODIS/AIC_article/scatterplot_validation","
 
 system(paste0("convert -trim ", "png/MODIS/AIC_article/dineof_scatterplot_validation",".png"," png/MODIS/AIC_article/dineof_scatterplot_validation",".png"))
 
-dns
-cor <- cor(df$X2020.01.24,df1$layer.1)
-cor
 

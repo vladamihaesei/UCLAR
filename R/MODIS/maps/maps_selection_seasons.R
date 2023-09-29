@@ -63,7 +63,6 @@ for(o in 1:length(orase)){
   df.myd <- tt%>%filter(frecventa <= prag[p] & tip == "MYD11A1")
   df.mod <- tt%>%filter(frecventa <= prag[p] & tip == "MOD11A1")
   
-
   df.seas <- df%>%mutate(seas = mkseas(ind, width = "DJF"))%>%group_by(x,y,per,seas,tip)%>% summarise(mean.seas = mean(values))
   
   df.seas1 <- df.seas%>%group_by(x,y,per,seas,tip)%>%

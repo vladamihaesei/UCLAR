@@ -5,6 +5,7 @@ library(ggplot2)
 
 nume <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")
+nume <- "Suceava2"
 
 for(n in 1:length(nume)){
   

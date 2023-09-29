@@ -9,7 +9,7 @@ library(rgdal)
 library(raster)
 library(sp)
 
-orase <- c("Bacau","Iasi","Botosani","PiatraNeamt") ## Pascani 
+orase <- c("Iasi","Bacau","Botosani","PiatraNeamt") ## Pascani 
 
 ##### MOD11A1
 for (i in 1:length(orase)){
@@ -19,12 +19,13 @@ for (i in 1:length(orase)){
   
   for(j in 1:length(types)){
     
-    files <- list.files(paste0("grids/LANDSAT/Copydata2/",orase[i],"/",types[j]), full.names = T, pattern = ".tif")
-    
+    print(types[j])
+    files <- list.files(paste0("grids/LANDSAT/CopyOfdata_2/",orase[i],"/",types[j]), full.names = T, pattern = ".tif")
+    files <- files[c(1:40,101)]
     #rr1 <- terra::rast(files)# citeste cu raster, cateodata salveaza data time
     r1 <- raster::stack(files)# citeste cu raster, cateodata salveaza data time
     
-    dates <- as.Date(do.call(rbind,strsplit(files,"/|_|.tif"))[,8],"%Y%m%d")
+    dates <- as.Date(do.call(rbind,strsplit(files,"/|_|.tif"))[,9],"%Y%m%d")
     
     r1[is.na(r1)]<- NA
     

@@ -3,13 +3,14 @@ library(terra)
 orase <- c("Barlad","Bacau", "Botosani","Dorohoi","Falticeni","Husi","Iasi","MoinComan",
            "Onesti","Pascani","PiatraNeamt","Radauti","Roman","Suceava","Vaslui")
 
+orase <- "Suceava2"
 
-for( i in 6:length(orase)){
+for( i in 1:length(orase)){
   
   print(orase[i])
-  files <- list.files(paste0("grids/MODIS/nc/nonfilled/",orase[i]), full.names = T, pattern = "nc")[1]
+  files <- list.files(paste0("grids/MODIS/nc/nonfilled/MOD11A1/",orase[i]), full.names = T, pattern = "nc")
   
-  files1 <- list.files(paste0("grids/MODIS/nc/nonfilled/",orase[i]), full.names = T, pattern = "nc")[2]
+  files1 <- list.files(paste0("grids/MODIS/nc/nonfilled/MYD11A1/",orase[i]), full.names = T, pattern = "nc")
   
   rst.day <- terra::rast(files, subds = "LST_Day_1km")
   rst.night <- terra::rast(files, subds = "LST_Night_1km")
